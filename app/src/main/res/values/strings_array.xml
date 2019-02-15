@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mode">
+        <item>view的补间动画</item>
+        <item>view的属性动画</item>
+    </string-array>
+</resources>
