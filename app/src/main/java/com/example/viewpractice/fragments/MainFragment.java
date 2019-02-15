@@ -17,7 +17,6 @@ import com.example.viewpractice.anim.ModeType;
 
 /**
  * 作者：wxz11 on 2019/2/15 14:09
- * Email : wangc@huitouche.com
  */
 public class MainFragment extends Fragment implements AdapterView.OnItemClickListener {
     private ListView lvMain;

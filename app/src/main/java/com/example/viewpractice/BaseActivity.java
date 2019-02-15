@@ -8,7 +8,6 @@ import butterknife.ButterKnife;
 
 /**
  * 作者：wxz11 on 2019/2/15 15:59
- * Email : wangc@huitouche.com
  */
 public abstract class BaseActivity extends AppCompatActivity {
     @Override

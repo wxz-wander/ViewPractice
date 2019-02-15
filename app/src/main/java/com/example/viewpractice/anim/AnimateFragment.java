@@ -17,7 +17,6 @@ import butterknife.OnClick;
 
 /**
  * 作者：wxz11 on 2019/2/15 14:47
- * Email : wangc@huitouche.com
  */
 public class AnimateFragment extends BaseFragment {
     @BindView(R.id.tv_translation)

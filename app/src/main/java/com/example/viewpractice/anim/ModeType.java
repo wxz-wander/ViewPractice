@@ -7,7 +7,6 @@ import java.lang.annotation.RetentionPolicy;
 
 /**
  * 作者：wxz11 on 2019/2/15 16:41
- * Email : wangc@huitouche.com
  */
 public class ModeType {
     /**

@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 /**
  * 作者：wxz11 on 2019/2/15 11:55
- * Email : wangc@huitouche.com
  */
 public class TextFragment extends Fragment {
 

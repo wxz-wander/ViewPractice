@@ -11,7 +11,6 @@ import com.example.viewpractice.R;
 
 /**
  * 作者：wxz11 on 2019/2/15 16:02
- * Email : wangc@huitouche.com
  */
 public class ModeDetailActivity extends BaseActivity {
     public static void start(Context context, @ModeType.Type int type) {
