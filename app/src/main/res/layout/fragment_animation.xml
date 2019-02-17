@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/clt_root"
     android:layout_height="match_parent">
 
     <ScrollView
@@ -49,7 +50,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="20dp"
-                android:text="通过这个例子，可以看出补间动画，不会改变View的触摸区域,原因写在代码注释"
+                android:text="通过这个例子，可以看到View做位移动画之后，监听区域还是原来的地方，说明补间动画，不会改变View的触摸区域"
                 android:textSize="18sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
