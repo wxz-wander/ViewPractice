@@ -1,9 +1,11 @@
 package com.example.viewpractice.fragments;
 
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.viewpractice.R;
-import com.example.viewpractice.anim.ModeDetailActivity;
-import com.example.viewpractice.anim.ModeType;
+import com.example.viewpractice.detail.ModeDetailActivity;
+import com.example.viewpractice.detail.ModeType;
 
 /**
  * 作者：wxz11 on 2019/2/15 14:09
@@ -51,6 +53,9 @@ public class MainFragment extends Fragment implements AdapterView.OnItemClickLis
                 break;
             case 1:
                 ModeDetailActivity.start(getContext(), ModeType.TYPE_ANIMATE);
+                break;
+            case 2:
+                ModeDetailActivity.start(getContext(), ModeType.TYPE_DRAG_UNLOCK);
                 break;
         }
     }

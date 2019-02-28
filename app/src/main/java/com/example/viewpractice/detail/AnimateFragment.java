@@ -1,4 +1,4 @@
-package com.example.viewpractice.anim;
+package com.example.viewpractice.detail;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

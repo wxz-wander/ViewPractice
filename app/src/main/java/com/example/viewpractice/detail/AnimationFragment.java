@@ -1,4 +1,4 @@
-package com.example.viewpractice.anim;
+package com.example.viewpractice.detail;
 
 import android.os.Bundle;
 
@@ -8,8 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.TranslateAnimation;
-import android.widget.ProgressBar;
-import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 

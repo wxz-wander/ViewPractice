@@ -38,7 +38,7 @@
                     android:scheme="http" />
             </intent-filter>
         </activity>
-        <activity android:name=".anim.ModeDetailActivity" />
+        <activity android:name=".detail.ModeDetailActivity" />
     </application>
 
 </manifest>

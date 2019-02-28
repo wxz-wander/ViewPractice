@@ -1,4 +1,4 @@
-package com.example.viewpractice.anim;
+package com.example.viewpractice.detail;
 
 import android.content.Context;
 import android.content.Intent;
@@ -42,6 +42,9 @@ public class ModeDetailActivity extends BaseActivity {
             case ModeType.TYPE_ANIMATE:
                 //todo 替换
                 fragment = new Fragment();
+                break;
+            case ModeType.TYPE_DRAG_UNLOCK:
+                fragment = new DragUnlockFragment();
                 break;
             default:
                 fragment = new Fragment();

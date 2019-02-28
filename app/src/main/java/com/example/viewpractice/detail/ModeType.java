@@ -1,4 +1,4 @@
-package com.example.viewpractice.anim;
+package com.example.viewpractice.detail;
 
 import androidx.annotation.IntDef;
 
@@ -17,9 +17,13 @@ public class ModeType {
      * 属性动画
      */
     public static final int TYPE_ANIMATE = 1;
+    /**
+     * 属性动画
+     */
+    public static final int TYPE_DRAG_UNLOCK = 2;
 
     //定义注解
-    @IntDef({TYPE_ANIMATION, TYPE_ANIMATE})
+    @IntDef({TYPE_ANIMATION, TYPE_ANIMATE,TYPE_DRAG_UNLOCK})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Type {
     }
