@@ -4,5 +4,6 @@
         <item>view的补间动画</item>
         <item>view的属性动画</item>
         <item>滑动解锁</item>
+        <item>NestedScrolling</item>
     </string-array>
 </resources>

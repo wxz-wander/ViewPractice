@@ -16,10 +16,10 @@ import android.widget.Scroller;
 import com.example.viewpractice.R;
 
 import androidx.annotation.RequiresApi;
-import androidx.core.view.ViewConfigurationCompat;
 
 /**
  * 作者：wxz11 on 2019/2/28 11:01
+ * 向右滑动解锁的按钮
  */
 public class DragUnlockView extends RelativeLayout {
     private static final String TAG = "DragUnlockView";
@@ -66,6 +66,7 @@ public class DragUnlockView extends RelativeLayout {
         int childCount = getChildCount();
         if (childCount != 2)
             throw new IllegalArgumentException("DragUnlockView only support two children");
+        //拿第二个View作为可滑动的View
         dragView = getChildAt(1);
         RelativeLayout.LayoutParams layoutParams = (LayoutParams) dragView.getLayoutParams();
         int[] rules = layoutParams.getRules();
@@ -89,17 +90,21 @@ public class DragUnlockView extends RelativeLayout {
         if (draggable) {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
+                    //记录按下的x
                     startX = (int) event.getX();
 //                    dragView.setTranslationX(startX);
                     Log.d(TAG, "onTouchEvent: startX : " + startX);
                     return true;
                 case MotionEvent.ACTION_MOVE:
+                    //修改透明度，表示在滑动
                     setAlpha(0.8f);
                     int moveX = (int) event.getX();
                     int deltaX = moveX - startX;
-                    if (deltaX < 0) deltaX = 0;
+                    if (deltaX < 0) deltaX = 0;//因为向右滑动，所以限制deltaX是正值
+                    //判断临界值，这里没有计算拖动View的margin值
                     if (deltaX > (getWidth() - getPaddingLeft() - getPaddingRight() - dragView.getWidth()))
                         deltaX = getWidth() - getPaddingLeft() - getPaddingRight() - dragView.getWidth();
+                    //让滑动View做translateX属性动画
                     dragView.setTranslationX(deltaX);
                     break;
                 case MotionEvent.ACTION_UP:
@@ -120,6 +125,9 @@ public class DragUnlockView extends RelativeLayout {
             return super.onTouchEvent(event);
     }
 
+    /**
+     * 根据滑动的距离，计算动画持续的时间
+     * */
     private int computeDuration(int dx) {
         if (dx < 0) dx = 0;
         if (dx > (getWidth() - getPaddingLeft() - getPaddingRight() - dragView.getWidth()))
@@ -135,6 +143,9 @@ public class DragUnlockView extends RelativeLayout {
 
     private boolean isAnimating = false;
 
+    /**
+     * 放手后，让View继续执行动画，到达指定位置
+     * */
     private void animateEnd(int endX, int duration, final boolean left) {
         if (isAnimating) return;
         ObjectAnimator translationX = ObjectAnimator.ofFloat(dragView, "translationX", endX);

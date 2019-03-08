@@ -21,9 +21,14 @@ public class ModeType {
      * 属性动画
      */
     public static final int TYPE_DRAG_UNLOCK = 2;
+    /**
+     * NestedScrolling机制
+     * 嵌套滑动机制
+     */
+    public static final int TYPE_NESTED_SRCOLLING = 3;
 
     //定义注解
-    @IntDef({TYPE_ANIMATION, TYPE_ANIMATE,TYPE_DRAG_UNLOCK})
+    @IntDef({TYPE_ANIMATION, TYPE_ANIMATE, TYPE_DRAG_UNLOCK, TYPE_NESTED_SRCOLLING})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Type {
     }

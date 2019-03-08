@@ -21,6 +21,7 @@ import butterknife.OnClick;
 
 /**
  * 作者：wxz11 on 2019/2/15 14:47
+ * 滑动解锁的例子
  */
 public class DragUnlockFragment extends BaseFragment {
     @BindView(R.id.dlv_lock)

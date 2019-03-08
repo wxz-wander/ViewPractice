@@ -57,6 +57,9 @@ public class MainFragment extends Fragment implements AdapterView.OnItemClickLis
             case 2:
                 ModeDetailActivity.start(getContext(), ModeType.TYPE_DRAG_UNLOCK);
                 break;
+            case 3:
+                ModeDetailActivity.start(getContext(), ModeType.TYPE_NESTED_SRCOLLING);
+                break;
         }
     }
 }

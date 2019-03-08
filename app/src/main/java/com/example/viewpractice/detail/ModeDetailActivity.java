@@ -3,6 +3,7 @@ package com.example.viewpractice.detail;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -45,6 +46,9 @@ public class ModeDetailActivity extends BaseActivity {
                 break;
             case ModeType.TYPE_DRAG_UNLOCK:
                 fragment = new DragUnlockFragment();
+                break;
+            case ModeType.TYPE_NESTED_SRCOLLING:
+                fragment = new NestedScrollingFragment();
                 break;
             default:
                 fragment = new Fragment();
