@@ -6,7 +6,7 @@
 
     <com.example.viewpractice.widgets.NestedParentFrameLayout
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="200dp"
         android:layout_gravity="bottom"
         android:layout_marginBottom="20dp"
         android:background="@android:color/holo_blue_dark"

@@ -52,10 +52,11 @@ public class NestedParentFrameLayout extends FrameLayout implements NestedScroll
     @Override
     public boolean onStartNestedScroll(@NonNull View child, @NonNull View target, int nestedScrollAxes) {
         Log.d(TAG, "onStartNestedScroll : child " + child + " target : " + target + " nestedScrollAxes : " + nestedScrollAxes);
-        if (nestedScrollAxes == ViewCompat.SCROLL_AXIS_VERTICAL) {
-            return true;
-        }
-        return super.onStartNestedScroll(child, target, nestedScrollAxes);
+        return (nestedScrollAxes & ViewCompat.SCROLL_AXIS_VERTICAL) != 0;
+//        if (nestedScrollAxes == ViewCompat.SCROLL_AXIS_VERTICAL) {
+//            return true;
+//        }
+//        return super.onStartNestedScroll(child, target, nestedScrollAxes);
     }
 
 
@@ -92,7 +93,7 @@ public class NestedParentFrameLayout extends FrameLayout implements NestedScroll
         int consumedY;
         // 如果超过了父View的上边界，只消费子View到父View上边的距离
         if (shouldMoveY <= 0) {
-            consumedY = - (int) getY();
+            consumedY = -(int) getY();
         } else if (shouldMoveY >= parent.getHeight() - getHeight()) {
             // 如果超过了父View的下边界，只消费子View到父View
             consumedY = (int) (parent.getHeight() - getHeight() - getY());

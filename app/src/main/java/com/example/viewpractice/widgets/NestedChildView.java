@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.view.NestedScrollingChild;
 import androidx.core.view.NestedScrollingChildHelper;
+import androidx.core.view.ViewCompat;
 
 /**
  * 作者：wxz11 on 2019/3/8 17:58
@@ -59,6 +60,8 @@ public class NestedChildView extends View implements NestedScrollingChild {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 downY = y;
+                //开启垂直方向的NestedScrolling
+                startNestedScroll(ViewCompat.SCROLL_AXIS_VERTICAL);
                 break;
             case MotionEvent.ACTION_MOVE:
                 int dy = y - downY;
@@ -71,6 +74,7 @@ public class NestedChildView extends View implements NestedScrollingChild {
                 break;
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:
+                stopNestedScroll();
                 break;
         }
         return true;
