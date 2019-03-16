@@ -25,10 +25,18 @@ public class ModeType {
      * NestedScrolling机制
      * 嵌套滑动机制
      */
-    public static final int TYPE_NESTED_SRCOLLING = 3;
+    public static final int TYPE_NESTED_SCROLLING = 3;
+    /**
+     * 仿照SwipeRefreshLayout实现一个自定义加载动画的刷新控件
+     */
+    public static final int TYPE_SWIPE_REFRESH = 4;
+    /**
+     * jni
+     */
+    public static final int TYPE_JNI = 5;
 
     //定义注解
-    @IntDef({TYPE_ANIMATION, TYPE_ANIMATE, TYPE_DRAG_UNLOCK, TYPE_NESTED_SRCOLLING})
+    @IntDef({TYPE_ANIMATION, TYPE_ANIMATE, TYPE_DRAG_UNLOCK, TYPE_NESTED_SCROLLING, TYPE_SWIPE_REFRESH, TYPE_JNI})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Type {
     }

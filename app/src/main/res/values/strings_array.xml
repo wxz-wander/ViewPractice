@@ -5,5 +5,7 @@
         <item>view的属性动画</item>
         <item>滑动解锁</item>
         <item>NestedScrolling</item>
+        <item>SwipeRefresh</item>
+        <item>JNI</item>
     </string-array>
 </resources>

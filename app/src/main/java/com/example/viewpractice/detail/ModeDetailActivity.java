@@ -47,8 +47,14 @@ public class ModeDetailActivity extends BaseActivity {
             case ModeType.TYPE_DRAG_UNLOCK:
                 fragment = new DragUnlockFragment();
                 break;
-            case ModeType.TYPE_NESTED_SRCOLLING:
+            case ModeType.TYPE_NESTED_SCROLLING:
                 fragment = new NestedScrollingFragment();
+                break;
+            case ModeType.TYPE_SWIPE_REFRESH:
+                fragment = new Fragment();
+                break;
+            case ModeType.TYPE_JNI:
+                fragment = new JniFragment();
                 break;
             default:
                 fragment = new Fragment();
